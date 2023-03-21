@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Mochiy Pop ONe',sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+    min-height: 100vh;
+    background: #141416;
+    
+}
+
+
+
+
+
+.heading {
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-size: 3em;
+    filter: drop-shadow(0 0 25px var(--clr));
+    color: var(--clr);
+}
+
+
+
+    

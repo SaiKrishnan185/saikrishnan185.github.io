@@ -1,0 +1,86 @@
+.Projects {
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+}
+
+.projectSection{
+    min-height: 80vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardGrid {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+    gap:1vh;
+}
+
+.cardGrid a{
+    text-decoration: none;
+    color: antiquewhite;
+    /* text-align: center; */
+    justify-content: center;
+    
+}
+
+.cardContent {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:top;
+    min-height: 50vh;
+    max-height: 50vh;
+    min-width: 20vw;
+    max-width: 20vw;
+    background: #262525;
+    color: #fff;
+    padding: 1.5rem;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    gap: 5vh;
+    transition: 1s;   
+}
+
+.projectCard:hover .cardContent{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px #dc00d4);
+}
+
+.cardGrid:hover > .projectCard:not(:hover) .cardContent{
+    filter:brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+    transform: scale(0.95);
+}
+
+.projectCategory {
+    font-size: smaller;
+    max-height: 3vh;
+    min-height: 3vh;
+    text-align: center;
+}
+
+.projectHeading {
+    max-height: 10vh;
+    min-height: 10vh;
+}
+
+
+@media (max-width: 700px){
+    .cardGrid {
+        flex-direction: column;
+    }
+
+    .cardContent {
+        justify-content: center;
+        min-height: 10vh;
+        min-width: 95vw;
+        max-width: 95vw;
+    }
+}

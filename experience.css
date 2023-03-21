@@ -1,0 +1,85 @@
+.Experience {
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    
+}
+
+.job {
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    min-height: 80vh;
+    color: antiquewhite;
+    gap:5vh;
+    padding:1.5rem;
+}
+
+.card {
+    background: #262525;
+    color: #fff;
+    padding: 1.5rem;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    transition: 1s;
+    /* filter: drop-shadow(0 0 10px var(--clr)); */
+}
+
+.card-title {
+    font-family: fantasy, sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    color:#1d1d1d;
+    transform: translateX(15rem);
+    transition: transform 2s;
+}
+
+.card:hover {
+    filter: drop-shadow(0 0 10px var(--clr));
+}
+
+.card:hover .card-title{
+    color: rgb(203, 255, 17);
+    transform: translateX(-45%);
+    transition: 3s ,transform 5s;
+}
+
+.card:hover .role , .card:hover .companyName , .card:hover .years{
+    color: #11caa1;
+    transition: 1s;
+}
+
+.role {
+    font-size: 1.2em;
+    transition: 1s;
+}
+
+.companyName , .years{
+    font-style: italic;
+    margin-bottom: 1rem;
+    transition: 1s;
+}
+
+.roleDetails {
+    line-height: 1.5;
+}
+
+
+
+@media (max-width: 700px){
+    .role {
+        font-size: 1em;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        max-width: 95vw;
+        min-width: 95vw;
+    }
+}

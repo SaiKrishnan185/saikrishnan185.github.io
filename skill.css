@@ -1,0 +1,116 @@
+.skills{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    
+}
+
+.skillList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    min-height:80vh;
+}
+
+.skillName{
+    background: #262525;
+    color: #fff;
+    padding: 1.5rem;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    transition: 1s;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-width: 15vw;
+}
+
+.skillName:hover {
+    filter: drop-shadow(0 0 25px #00dc82);
+}
+
+.skillName:hover .skillDetail{
+    color: #00dc82;
+    transition: 1s;
+}
+
+.skillName:hover .progressFill{
+    visibility: visible;
+    transition: 2s;
+    width:var(--width);
+    
+}
+
+.skillName:hover .progressFill p{
+    transition: 2s;
+    color: black;
+}
+
+.skillName:hover .progressValue{
+    color: white;
+    visibility: hidden;
+    transition: 0.2s;
+}
+
+.skillName:hover .progress{
+    filter: drop-shadow(0 0 10px #00dc82);
+}
+
+.progress{
+    transition: 1s;
+}
+
+.skillDetail{
+    padding-bottom: 2vh;
+    transition: 1s;
+}
+
+.progressFill p {
+    font-weight: bolder;
+    color: rgb(0, 247, 255);
+}
+.progressValue {    
+    transition: 3s;
+    color: black;
+    font-weight: bold;
+    visibility: visible;
+    
+}
+
+.progress {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    position: relative;
+}
+
+.progressFill {
+    /* width:var(--width); */
+    transition: 0.75s;
+    visibility: hidden;
+    width:20%;
+    background-color: rgb(0, 247, 255);
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+
+
+@media (max-width: 700px){
+    .skillList{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+    }
+}

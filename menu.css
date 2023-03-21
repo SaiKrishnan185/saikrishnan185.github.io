@@ -1,0 +1,143 @@
+nav {
+    top:0;
+    display: flex;
+    height: 8vh;
+    min-width: 100vw;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    font-size: small;
+    z-index: 13;
+    background-color: #262525;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    transition: 0.5s;
+}
+
+nav a:hover{
+    filter: drop-shadow(0 0 5px #00ade1);
+    transition: 0.5s;
+}
+
+.resumeBtn {
+    position: absolute;
+    margin-right: 0;
+    padding-right: 0;
+    transform: translateX(40vw);
+    filter:contrast(0);
+    transition: 1s;
+}
+
+.logo {
+    font-size: 1.2em;
+    overflow: hidden;
+    min-height: 1vh;
+    color: antiquewhite;
+    text-decoration: none;
+    /* padding: 1%; */
+}
+
+ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+}
+
+ul li a{
+    font-size: 3em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke:1px rgba(255, 255, 255, 0.5);
+}
+
+ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width:0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid var(--clr);
+    -webkit-test-stroke: 1px var(--clr);
+}
+
+ul li a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+
+.menuIcon {
+    position: fixed;
+    z-index: 12;    
+    padding-top: 8vh;
+    min-height: 100vh;
+    
+}
+
+.menuSvg{
+    z-index: 15;
+    position: absolute;
+    margin-left: 1.2vh;
+    margin-top: 1.2vh;
+    transition: 1s;
+}
+
+.menuIcon:hover{
+    filter: drop-shadow(0 0 10px #00ade1);
+}
+
+.menuIcon:hover .menu{
+    /* visibility: visible; */
+    transform: translateX(0%);
+    transition: 1s;
+}
+
+.menuIcon:hover .menuSvg{
+    filter: drop-shadow(0 0 5px #00ade1);
+    transition: 1s;
+}
+
+.menu{
+    z-index: 12;
+    margin-left: 0;
+    padding-left: 1vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 25vw;
+    background-color: #262525;
+    position: fixed;
+    top: 0;
+    transform: translateX(-99.9%);
+    transition: 0.45s;
+}
+
+nav:hover .menu{
+    visibility: visible;
+}
+
+
+.fullContent:hover > .blockPiece:not(:hover) .blurPiece{
+    filter:brightness(1) saturate(0.9) contrast(0.8) blur(3px);
+}
+
+
+@media (max-width: 700px){
+    nav {
+        position: fixed;
+    }
+    ul li a{
+        font-size: 2em;
+    }
+}
