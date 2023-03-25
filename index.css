@@ -26,6 +26,10 @@ body{
     color: var(--clr);
 }
 
-
+@media (max-width: 700px){
+    .heading {
+        padding-top: 15%;
+    }
+}
 
     
