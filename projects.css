@@ -50,8 +50,8 @@
 }
 
 .projectCard:hover .cardContent{
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 25px #dc00d4);
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 15px #dc00d4);
 }
 
 /* .cardGrid:hover > .projectCard:not(:hover) .cardContent{
