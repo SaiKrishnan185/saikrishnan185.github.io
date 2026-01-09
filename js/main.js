@@ -64,3 +64,21 @@ if (glow) {
     glow.style.opacity = '0';
   });
 }
+
+
+/* Mobile nav toggle */
+const navToggle = document.querySelector('.nav-toggle');
+const navLinksMob = document.querySelector('.nav-links');
+
+if (navToggle && navLinksMob) {
+  navToggle.addEventListener('click', () => {
+    navLinksMob.classList.toggle('open');
+  });
+
+  // Close menu when clicking a link
+  navLinksMob.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinksMob.classList.remove('open');
+    });
+  });
+}
